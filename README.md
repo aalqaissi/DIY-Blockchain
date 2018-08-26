@@ -1,4 +1,4 @@
-# First Day -- Block Chain Fundamentals
+# Part One: DIY Blockchain
 
 What better way to learn about blockchains than to build your own? In this
 section you will construct your own simple blockchain in the vein of Bitcoin
@@ -28,23 +28,39 @@ first install [Node 8](https://nodejs.org/) or higher. Then run these commands
 from your terminal:
 
 ```bash
+cd code/part-one/
 npm install
 npm test
 ```
 
-You should see a number of tests run, most of which are failing. Your job, in
-short, is to make these tests pass. As you work your way through the sections
-below, keep running `npm test` to check your progress and get clues to what you
-should do next.
+You should see a number of tests run, most of which are failing.
+
+(╯︵╰,)
+
+Your job, in short, is to make these tests pass. As you work your way through
+the sections below, keep running `npm test` to check your progress and get
+clues to what you should do next.
 
 
 ## The Curriculum
 
 ### Blockchain Lecture
 
-The core curriculum is a lecture on blockchain structure and the underlying
-cryptographic technologies which you will receive in person. The slides for
-this lecture are available through the ReBootKamp web portal.
+The first part of the Cryptomoji lecture is a brief overview of the blockchain
+data structure and the technologies that power it: hashing, signatures, and
+consensus. The lecture itself is 15 minutes long with an additional 10 minutes
+of Q&A. They are included in this repo as two MP4 files:
+
+- [Blockchain Overview Lecture (MP4)](../../teaching/videos/01a_blockchain_lecture.mp4)
+- [Blockchain Overview Questions (MP4)](../../teaching/videos/01b_blockchain_qa.mp4)
+
+In addition to the video, the slides are available in a variety of formats. The
+general blockchain section is the first 8 slides:
+
+- [Sawtooth App Development (Google Doc)](https://docs.google.com/presentation/d/1vRGIli6bgXP0FwdfZG7KrEIGS6apANnSCBk3Sg-5btc/edit?usp=sharing)
+- [Sawtooth App Development (PPTX)](../../teaching/slides/sawtooth_app_development.pptx)
+- [Sawtooth App Development (ODP)](../../teaching/slides/sawtooth_app_development.odp)
+- [Sawtooth App Development (PDF)](../../teaching/slides/sawtooth_app_development.pdf)
 
 ### Zulfikar Ramzan: Bitcoin
 
@@ -62,10 +78,10 @@ blockchain will have some differences from Bitcoin (in particular the way
 - [Bitcoin: The money supply](https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/bitcoin/v/bitcoin-the-money-supply)
 - [Bitcoin: The security of blockchains](https://www.khanacademy.org/economics-finance-domain/core-finance/money-and-banking/bitcoin/v/bitcoin-security-of-transaction-block-chains)
 
-In particular the videos on _hashing_, _signatures_, and _transaction
-blockchains_ will be very helpful. If you are going to tackle the extra credit,
-you will also want to watch the videos on _proof of work_ and the _money
-supply_.
+You don't necessarily need to take the whole course, but makes sure you watch
+(and absorb!) the videos on _hashing_, _signatures_, and _transaction
+blockchains_. If you are going to tackle the extra credit, you will also want
+to watch the videos on _proof of work_ and the _money supply_.
 
 
 ## The Project
@@ -216,9 +232,10 @@ made, and one more just for fun, to try to tamper with your own blockchain:
 
 ## Extra Credit
 
-The next module will help you gain a deeper understanding of consensus
-algorithms, and _Proof of Work_ in particular. It is optional, but highly
-encouraged if you have the time remaining to attempt it.
+While the next module can help you gain a deeper understanding of consensus
+algorithms, and _Proof of Work_ in particular, you can feel free to move on to
+[part two](../part-two/README.md) at this point. This section is strictly
+optional.
 
 To run the tests for this extra credit, remove the  `.skip` from the wrapping
 `describe` block on Line 14 of
