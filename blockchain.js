@@ -21,10 +21,21 @@ class Transaction {
    *   - signature: a unique signature generated from a combination of the
    *     other properties, signed with the provided private key
    */
-  constructor(privateKey, recipient, amount) {
-    // Enter your solution here
 
+  constructor(privateKey, recipient, amount) {
+    this.source = signing.getPublicKey(privateKey);
+    this.recipient = recipient;
+    this.amount = amount;
+    const signedMessage = this.source + this.recipient + this.amount;
+    this.signature = signing.sign(privateKey, signedMessage);
   }
+
+  push(transactions) {
+    let hash = createHash('sha256');
+    hash.update(Buffer.from('' + nonce));
+    this.hash = hash.digest().toString();
+
+  }  
 }
 
 /**
@@ -44,8 +55,10 @@ class Block {
    *   - hash: a unique hash string generated from the other properties
    */
   constructor(transactions, previousHash) {
-    // Your code here
-
+    this.transactions = transactions;
+    this.previousHash = previousHash;
+    this.nonce = 0;
+    this.hash = 'Genusis';
   }
 
   /**
@@ -58,7 +71,9 @@ class Block {
    *   properties change.
    */
   calculateHash(nonce) {
-    // Your code here
+    let hash = createHash('sha256');
+    hash.update(Buffer.from('' + nonce));
+    this.hash = hash.digest().toString();
 
   }
 }
